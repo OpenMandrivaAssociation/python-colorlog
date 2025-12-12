@@ -1,7 +1,7 @@
 Summary:	A colored formatter for the python logging module 
 Name:		python-colorlog
 Version:	6.9.0
-Release:	1
+Release:	2
 Source0:	https://files.pythonhosted.org/packages/source/c/colorlog/colorlog-%{version}.tar.gz
 URL:		https://pypi.org/project/colorlog/
 License:	MIT License
