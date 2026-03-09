@@ -1,26 +1,26 @@
-Summary:	A colored formatter for the python logging module 
+%define module colorlog
+
 Name:		python-colorlog
-Version:	6.9.0
-Release:	3
-Source0:	https://files.pythonhosted.org/packages/source/c/colorlog/colorlog-%{version}.tar.gz
-URL:		https://pypi.org/project/colorlog/
+Summary:	A colored formatter for the python logging module
+Version:	6.10.1
+Release:	1
 License:	MIT License
 Group:		Development/Python
-BuildRequires:	python%{pyver}dist(pip)
+URL:		https://pypi.org/project/colorlog/
+Source0:	https://files.pythonhosted.org/packages/source/c/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+BuildSystem:	python
 BuildArch:	noarch
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 Add colours to the output of Python's logging module.
 
-%prep
-%autosetup -p1 -n colorlog-%{version}
-
-%build
-%py_build
-
-%install
-%py_install
+%prep -a
+# Remove bundled egg-info
+rm -rf %{module}.egg-info
 
 %files
-%{py_sitedir}/colorlog
-%{py_sitedir}/colorlog-*.*-info
+%{py_sitedir}/%{module}
+%{py_sitedir}/%{module}-%{version}-py%{pyver}.*-info
