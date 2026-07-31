@@ -2,7 +2,7 @@
 
 Name:		python-colorlog
 Summary:	A colored formatter for the python logging module
-Version:	6.10.1
+Version:	6.12.0
 Release:	1
 License:	MIT License
 Group:		Development/Python
